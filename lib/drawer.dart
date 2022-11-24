@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/form.dart';
 import 'package:counter_7/data.dart';
+import 'package:counter_7/mywatchlist.dart';
 
 class DrawerWidget extends StatelessWidget {
     @override
@@ -37,6 +38,16 @@ class DrawerWidget extends StatelessWidget {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(builder: (context) => const MyDataPage()),
+                            );
+                        },
+                    ),
+                    ListTile(
+                        title: const Text('Watch List'),
+                        onTap: () {
+                            // Routing the menu to the form page
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(builder: (context) => const MyWatchListPage()),
                             );
                         },
                     ),

@@ -49,3 +49,25 @@ It is simmilar to the concept of stack and is called navigator. When a page is p
 - Navigation Button: On the drawer I put navigation button as a button to route to other pages. I used onTap events to initiate the Navigator.pushReplacement
 - Form Page: With form key and the appropriate variables. Also with the model class. Then I have an input that can take it according to the model and put it into a list.
 - Data Page: Import the list of created data from form page. And then, I display it with Card Widget.
+
+## Assignment 9: Flutter Web Service Integration
+
+### Can we retrieve JSON data without creating a model first? If yes, is it better than creating a model before retrieving JSON data?
+You can retrieve JSON data without model with the jsonDecode() function from dart:convert. But it will take a longer time to parse the JSON data rather than just have a model. Therefore it is better to create a model first before retrieving the data.
+
+### List the widgets that you used in this project and explain their functions.
+Widgets that I felt are the most usable in this project:
+- FutureBuilder: A widget that can build from future classes.
+- GestureDetector: Widget that can detect gesture. I used this with onTap function to go to next page with Navigator.push
+
+###  Explain the mechanism of retrieving data from json so it can be shown in Flutter.
+Fetch JSON file async-ly from the web with flutter get http function with class Future. Then in the show page, use FutureBuilder to iterate the list that contains Future variables, and show accordingly. 
+
+### Explain how you implement the checklist above.
+- Navigation/Drawer: I add mywatchlist page to the drawer widget.
+- Model: By using quicktype, I was able to transform the JSON data into a model class that is acceptable to .dart file.
+- Fetch: Fetch async-ly using the parse JSON and http get from flutter. Then, list the JSON file.
+- Navigate to details: By using GestureDetector widget and onTap function, I was able to navigate it to the detail page.
+- Detail page: I used row and text widget to display the detail of individual watchlist.
+- Back button: With function onPressed and Navigator.pop, I was able to implement a back feature.
+- For the bonus, I tried but it is still buggy and not work with the checklist.
